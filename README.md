@@ -1,4 +1,3 @@
-Certainly! Below is a documentation template for Vanguard, based on the provided sections:
 
 ---
 
