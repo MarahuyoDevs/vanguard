@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>{{ error_code }} {{error_message}}</h1>
+  </body>
+  <script defer src="/static/pyodide/pyodide.js">
+    async function main() {
+      let pyodide = await loadPyodide();
+      pyodide.runPython(atob(document.getElementById("python").innerText));
+    }
+    main();
+  </script>
+</html>

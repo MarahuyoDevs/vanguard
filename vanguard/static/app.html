@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{head['title']}}</title>
+  </head>
+  <body>
+    <div id="main">{{slot}}</div>
+    <div id="loading" style="position: fixed; bottom: 0; right: 0">
+      Loading Pyodide Environment
+    </div>
+  </body>
+  <script src="/static/vanguard/routing.js"></script>
+  <script async defer type="module">
+    import * as _ from "/static/pyodide/pyodide.js";
+    async function main() {
+      let pyodide = await globalThis.loadPyodide();
+      document.getElementById("loading").style.display = "none";
+    }
+    main();
+  </script>
+</html>
