@@ -4,7 +4,7 @@
 # Vanguard Documentation
 
 ## Introduction
-Vanguard is an experimental framework that combines Svelte with Pyodide and Pypox. It introduces novel concepts like no-reload anchor tags, convention-based file routing system, and more.
+Vanguard is a Python framework designed as an extension to the Pypox framework. It utilizes Jinja2 for server-side templating and Pyodide as an alternative for JavaScript functionality.
 
 ## Installation
 To install Vanguard in your local development environment, follow these steps:
